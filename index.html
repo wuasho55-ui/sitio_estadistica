@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi sitio ww </title>
+
+  <style>
+    /* ----- ESTILOS GENERALES ----- */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #0f172a, #1e293b, #0f172a);
+      background-size: 300% 300%;
+      animation: gradientMove 12s ease infinite;
+      color: white;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #e2e8f0;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* ----- HERO SECTION ----- */
+    .hero {
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      animation: fadeIn 1.8s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 28px;
+      background: #38bdf8;
+      color: #0f172a;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #7dd3fc;
+    }
+
+    /* ----- SERVICIOS ----- */
+    .servicios {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .servicios h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      padding: 25px;
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-5px);
+    }
+
+    /* ----- CONTACTO ----- */
+    .contacto {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(0,0,0,0.2);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header>
+    <h2 style="margin:0;">Bienvenido al mundo de los datos</h2>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Estadística</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <h1>El mundo de la Estadística</h1>
+    <p>El que maneja los datos, maneja el mundo estadístico.</p>
+    <button class="btn">Comenzar</button>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="servicios">
+    <h2>Servicios</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Diseño Web</h3>
+        <p>Sitios modernos, rápidos y elegantes.</p>
+      </div>
+      <div class="card">
+        <h3>Dashboards</h3>
+        <p>Visualizaciones con R Shiny, Python o Power BI.</p>
+      </div>
+      <div class="card">
+        <h3>Automatización</h3>
+        <p>Scripts inteligentes para mejorar procesos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>Escríbeme a: <strong>tucorreo@example.com</strong></p>
+  </section>
+
+  <footer>
+    © 2025 - Mi Landing Page Moderna
+  </footer>
+
+</body>
+</html>
+
+
